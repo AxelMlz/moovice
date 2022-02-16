@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
       <BrowserRouter> 
       <div>
-    <h1>src:"https://api.themoviedb.org/3/movie/550?api_key=0d213053b4412c4badf1b0e0e9e5bda2"</h1>
+          <h1>Moovice</h1>
         <nav> 
           <ul>
             <li><Link to="/">Home</Link></li> 
