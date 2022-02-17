@@ -1,23 +1,26 @@
 import React, { Component } from 'react'
+import styled from 'styled-components';
 
-export default class card extends Component {
+
+ class card extends React.Component {
     constructor(){
         super();
         this.state = {
-            jacket:"",
+            poster:"",
             title:"",
-            yearOfRelease:"",
             synopsis:"",
+            yearOfRelease:"",
         }
     }
     componentDidMount(){
-    this.setState({ jacket: "https://www.pngall.com/wp-content/uploads/1/Film-High-Quahty-PNG.png"}) 
+    this.setState({ poster: "https://www.pngall.com/wp-content/uploads/1/Film-High-Quahty-PNG.png"}) 
     }
+
   render() {
     return (
       <div>
       
-         <img src={this.props.jacket} alt="movie jacket" />
+         <img src={this.props.poster} alt="poster of the movie"/> 
            
               <h3>{this.props.title}</h3>
               <h3>{this.props.yearOfRelease}</h3>
@@ -27,3 +30,5 @@ export default class card extends Component {
     )
   }
 }
+
+export default card
