@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Card from '../component/card';
 
 export default class popular extends Component {
     constructor() {
@@ -17,11 +18,28 @@ export default class popular extends Component {
             this.setState({movies:res})
             console.log(this.state.movies);
         })  
-        
+
+
+
     }
   render() {
-    return (
-      <div>popular</div>
+       return (
+      <div>
+    <h1>popular</h1>
+{this.state.movies.map((film )=> { 
+    while (i < 20){ 
+       return <Card
+         jacket = {`https://image.tmdb.org/t/p/w300/${this.state.movies.poster_path}`} 
+         title = {film.original_title}
+         YearOfRelease = {this.state.movies.release_date}
+         Synopsis = {this.state.movies.overview}/>
+         }return null
+       })}
+      </div>
+     
+  
+   
+      
     )
   }
 
